@@ -1,0 +1,418 @@
+@charset "utf-8";
+/* 5COS026W - Advanced Client Side Web Development */
+/* ICT Portfolio */
+/* w1810019 */
+/* 20200312 */
+/* CSS Document */
+
+/* 1 - Specify Font */
+/* 2 - Colors & Transparent Color */
+/* 3 - Shadows */
+/* 4 - Text Effects */
+/* 5 - Attribute Selectors */
+/* 6 - Pseudo Elements with Generated Content */
+/* 7 - User Action Pseudo Class */
+/* 8 - Child Combinator */
+/* 9 - Structural Selector */
+/* 10 - Negation Pseudo Class */
+/* 11 - Nth Pseudo Class */
+/* 12 - Validity Pseudo Class */
+/* 13 - Relational Selector */
+/* 14 - Border */
+/* 15 - Rounded Corners */
+/* 16 - Gradient */
+/* 17 - Transforms */
+/* 18 - Animations */
+/* 19 - Specificity */
+/* 20 - Comments and Indentation */
+
+
+
+/* Universal Selector-------------------------------------------------*/
+
+* {
+	box-sizing: border-box;
+	font-family: "Futura";	/* 1 - Specify Font */
+	src: url("fonts/Futura Bold font.ttf");
+	margin: 0;
+}
+
+
+
+/* Reused Styles in Multiple Pages-------------------------------------------------*/
+
+
+/* ---Logo--- */
+
+header {
+	padding: 2% 0 1% 0;
+}
+
+.trench_logo {
+	max-width: 120px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/* ---Navigation Bar--- */
+
+nav {
+	position: relative;
+	padding: 1% 0 1.5% 0;
+	text-align: center;
+	display: inline-block;
+	font-size: 15px;
+	width: 100%;
+}
+
+/* 10 - Negation Pseudo Class */
+h1:not(span) {
+	color: black;	/* 2 - Colors & Transparent Color */
+}
+
+/* 13 - Relational Selector */
+/* 8 - Child Combinator */
+nav > a {
+	text-decoration: none;
+	color: black;	/* 2 - Colors & Transparent Color */
+	transition-duration: 500ms;
+	margin-right: 10px;
+}
+
+/* 7 - User Action Pseudo Class */
+nav a:hover {
+	color: rgba(0, 0, 0, 0.5);	/* 2 - Colors & Transparent Color */
+}
+
+.active_pg {
+	
+	/* 14 - Border */
+	border-bottom-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-color: #c740ad;
+	
+	padding-bottom: 2px;
+}
+
+/* ---Footer--- */
+
+footer {
+	padding: 60px 0;
+}
+
+.social_icon {
+	width: 35px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.social_links a {
+	text-decoration: none;
+}
+
+.gradient_txt {
+	background: linear-gradient(#c740ad, #8f40c1);   /* 16 - Gradient */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+
+/* Home Page-------------------------------------------------*/
+
+
+/* ---Home - Introduction--- */
+
+.home_content1 {
+	text-align: center;
+	padding: 150px 0 175px 0;
+}
+
+#home_tagline {
+	font-size: 80px;
+	padding: 3% 1%;
+}
+
+#portfolio_btn {
+	background-color: white;
+	padding: 15px 32px;
+	border-radius: 15px;	/* 15 - Rounded Corners */
+	width: 200px;
+	cursor: pointer;
+	border: none;
+	box-shadow: -7px 7px 30px grey;	/* 3 - Shadows */
+	transition-duration: 1s;
+	margin-bottom: 2%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#portfolio_btn:hover {
+	/* 17 - Transforms */
+	transform: scale(1.1);
+}
+
+#portfolio_btn_link {
+	text-decoration: none;
+	color: black;	/* 2 - Colors & Transparent Color */
+}
+
+
+/* ---Home - Twitter Feed--- */
+
+.feed_container {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.twitter_feed {
+	width: 30%;
+}
+
+#side_text1 {
+	font-size: 30px;
+	text-align: center;
+	width: 50%;
+	align-items: center;
+	display: inline;
+	float: none;
+	margin: auto;
+}
+
+.twitter_ref::before {
+	font-weight: bold;
+	color: #00ADE2;	/* 2 - Colors & Transparent Color */
+	content: "Twitter";
+}
+
+.arrow_left {
+	max-width: 20px;
+	height: auto;
+	float: left;
+	transform: rotate(180deg);
+	position: relative;
+	
+	/* 18 - Animations */
+	animation-name: arrow_animation;	
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+	
+	margin-top: 20px;
+}
+
+/* 18 - Animations */
+@keyframes arrow_animation {
+	0%   {left:0px;}
+    25%  {left:90%;}
+    50%  {right:0%;}
+    75%  {left:90%;}
+    100% {left:0px;}
+}
+
+/* Added responsiveness for screen less than 1000px of width */
+@media only screen and (max-width: 1000px) {
+	.twitter_feed {
+		width: 50%;
+	}
+}
+
+
+
+/* About-------------------------------------------------*/
+
+
+/* ---About - Intrduction--- */
+
+#about_content1 {
+	text-align: center;
+	padding: 150px 0;
+}
+
+#about_tagline {
+	font-size: 80px;
+	padding: 2.2% 1%;
+}
+
+#about_content2 {
+	padding: 40px;
+	text-align: center;
+	font-size: 150%;
+}
+
+#gradient_txt_sl {
+	background: linear-gradient(#fece00, #9b1e3c);   /* 16 - Gradient */
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+/* About - Services Offered */
+
+.service {
+	position: relative;
+	float: left;
+	display: block;
+	padding: 80px 50px;
+	width: 100%;
+}
+
+.service_topic {
+	font-size: 300%;
+}
+
+.service_list {
+	list-style: none;
+}
+
+.service_list li {
+	color: rgba(0, 0, 0, 0.5);	/* 2 - Colors & Transparent Color */
+	font-family: "Gotham";	/* 1 Specify Font */
+	font-weight: 700;
+}
+
+/* 9 - Structural Selector */
+/* 11 - Nth Pseudo Class */
+.service li:nth-of-type(even) {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.service_img {
+	max-width: 300px;
+	height: auto;
+	float: right;
+	display: inline-block;
+	position: relative;
+	margin-top: 50px;
+	box-shadow: -7px 7px 30px grey;	/* 3 - Shadows */
+	border-radius: 15px;	/* 15 - Rounded Corners */
+}
+
+
+
+/* Contact-------------------------------------------------*/
+
+
+/* ---Quotation Form--- */
+
+form {
+	text-align: center;
+	padding: 30px;
+}
+
+label {
+	width: 80px;
+	display: inline-block;
+	float: left;
+	text-align: left;
+	margin-left: 15%;
+}
+
+label, input, select {
+	font-family: "Gotham";	/* 1 Specify Font */
+	font-weight: 700;
+}
+
+input, select, textarea {
+	border: solid 2px;	/* 14 - Border */
+	border-radius: 5px;	/* 15 - Rounded Corners */
+}
+
+/* 12 - Validity Pseudo Class */
+input:valid {
+	border-color: #81FFDD;	/* 2 - Colors & Transparent Color */
+}
+
+/* 5 Attribute Selector */
+input[type="submit"] {
+	border-radius: 15px;	/* 15 - Rounded Corners */
+	box-shadow: -7px 7px 30px grey;	/* 3 - Shadows */
+	width: 130px;
+	height: 50px;
+	border: none;	/* 14 - Border */
+	background-color: white;
+	transition-duration: 1s;
+	cursor: pointer;
+}
+
+/* 7 - User Action Pseudo Class */
+#submit_btn:hover {
+	transform: scale(1.1);	/* 17 - Transforms */
+}
+
+input, select, textarea {
+	width: 50%;
+	margin-bottom: 33px;
+}
+
+
+
+/* Portfolio-------------------------------------------------*/
+
+
+/* ---Portfolio - Introduction--- */
+
+#portfolio_content1 {
+	text-align: center;
+	padding: 200px 50px;
+}
+
+#portfolio_tagline {
+	font-size: 80px;
+}
+
+
+/* ---Movie Poster Collection Header--- */
+
+#portfolio_content2 {
+	text-align: center;
+	padding: 5%;
+}
+
+
+/* ---Portfolio Blogs--- */
+
+.blog_flex_container {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 4%;
+}
+
+.poster_img {
+	max-width: 250px;
+	height: auto;
+}
+
+.poster {
+	width: 250px;
+	border-radius: 15px;	/* 15 - Rounded Corners */
+	display: inline-block;
+	margin: 100px;
+	box-shadow: -7px 7px 30px grey;	/* 3 - Shadows */
+}
+
+.poster_details {
+	padding: 7% 4%;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+.synopsis {
+	font-family: "Gotham";
+	font-weight: 700;
+}
+
+p.synopsis {
+	word-break: keep-all;	/* 4 - Text Effects */
+}
+
+.poster_details > a {
+	text-decoration: none;
+	color: #CE00BF;
+	font-family: "Roboto";	/* 1 Specify Font */
+	font-weight: 700;
+}
